@@ -1,0 +1,38 @@
+﻿@page
+@model FormModel
+@using PVA_Zápočet.Pages.CreditPages
+@{
+    ViewData["Title"] = "Form";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <h3>Form</h3>
+            <hr>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="control-label" for="score">Score</label>
+                    <select asp-for="Credit.Value" class="form-select" id="score">
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span asp-validation-for="Credit.Value" class="text-danger"></span>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <input asp-for="Credit.Success" type="checkbox" class="form-check-input" id="succ">
+                    <label class="control-label" for="succ">Success</label>
+                    <span asp-validation-for="Credit.Success" class="text-danger"></span>
+                </div>
+                <button class="btn btn-primary mt-4" type="submit">Submit</button>
+            </form>
+            <p class="text-success">@message</p>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
