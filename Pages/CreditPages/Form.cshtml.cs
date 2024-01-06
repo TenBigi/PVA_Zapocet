@@ -35,9 +35,6 @@ namespace PVA_Zápočet.Pages.CreditPages
 
         public void OnGet()
         {
-
         }
-
-
     }
 }
